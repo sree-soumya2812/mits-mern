@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useState } from "react";
 
 const Contact = () => {
+  const [name, setName] = useState("G Sree Soumya");
+  const toggleName = () => {
+    setName(name === "G Sree Soumya" ? "Soumi" : "G Sree Soumya");
+  };
   return (
     <div>
-      <p>Contact</p>
+      <h1>Name: {name}</h1>
+      <button onClick={toggleName}>toggle</button>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

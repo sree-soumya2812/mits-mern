@@ -1,23 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from "react";
 
 function UseEffectApi() {
-  const [users,setUsers]=useState([]);
-    useEffect(()=>{
-        fetch('https://jsonplaceholder.typicode.com/users')
-        .then((res)=>res.json())
-        .then((data)=>console.log(data));
-        },[]) 
-        return (
-            <div><ul>
-              {users.map((user,index)=>(
-                <li key={index}>
-                  <p>Name: {user.name}</p>
-                 <p>Email: {user.email}</p>
-                 <p>latitute: {user.address.geo.lat}</p>
-                  </li>
-              ))}
-              </ul></div>
-        )   
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }, []);
+  return <div>UseEffectApi</div>;
 }
 
-export default UseEffectApi
+export default UseEffectApi;

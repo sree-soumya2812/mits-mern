@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-const About = ({dept,name,age}) => {
+const About = ({ dept, name, age }) => {
   return (
     <div>
       <p>Name:{name}</p>
@@ -8,7 +8,7 @@ const About = ({dept,name,age}) => {
       <p>Age:{age}</p>
       <p>Dept:{dept}</p>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

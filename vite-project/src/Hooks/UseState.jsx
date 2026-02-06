@@ -1,20 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 const UseState = () => {
-    const [name,setName]=useState("");
-    const handleSubmit=(e)=>{
-      e.preventDefault();
-        console.log(name);
-    }
+  const [name, setName] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(name);
+  };
   return (
     <div>
       <form onSubmit={handleSubmit}>
         <label>Name:</label>
-        <input type="text"  value={name} onChange={(e)=>setName(e.target.value)}placeholder='Enter the name'/>
-        <button type='submit'>Submit</button>
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Enter the name"
+        />
+        <button type="submit">Submit</button>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default UseState
+export default UseState;
