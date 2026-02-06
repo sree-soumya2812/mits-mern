@@ -1,5 +1,5 @@
 const express = require("express");
-const todoRoute = require("./router/todorouter");
+const todoRoute = require("./router/todoRouter");
 const dotenv = require("dotenv");
 const userRoute = require("./router/userRouter");
 const connectDB = require("./config/db");
