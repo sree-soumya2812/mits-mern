@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  button { width:60px; height:60px; font-size:25px; }
+</style>
+</head>
+<body>
+
+<h2>Tic Tac Toe</h2>
+<div>
+  <button onclick="play(this)"></button>
+  <button onclick="play(this)"></button>
+  <button onclick="play(this)"></button><br>
+  <button onclick="play(this)"></button>
+  <button onclick="play(this)"></button>
+  <button onclick="play(this)"></button><br>
+  <button onclick="play(this)"></button>
+  <button onclick="play(this)"></button>
+  <button onclick="play(this)"></button>
+</div>
+
+<script>
+let turn = "X";
+function play(btn){
+  if(btn.innerHTML==""){
+    btn.innerHTML = turn;
+    turn = (turn=="X") ? "O" : "X";
+  }
+}
+</script>
+
+</body>
+</html>
